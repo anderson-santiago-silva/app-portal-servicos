@@ -1,0 +1,41 @@
+
+{{#each project}}<br>
+        <h1>{{this.executor.name}}</h1>
+        <img src="{{this.executor.image}}" alt="{{this.executor.name}} photo">
+        <h3>{{this.executor.phone}}</h3><br>
+    <div>
+        <h3>{{this.title}}</h3>
+        <h4>Descrição</h4>
+        <h5>{{this.description}}</h5>
+        <h4>Fotos do projeto</h4>
+        <img src="{{this.image_project}}" alt="{{this.name}} photo"> <!-- Para lisar imagens em um array é preciso fazer um loop no array com o #each -->
+        </div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProject">
+  Editar dados do projeto
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="editProject" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar meu projeto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="/services/projects/edit/{{this._id}}" method="post">
+        <div class="modal-body">
+            <input type="text" name="serviceTitle" placeholder="Insira um título para o seu projeto." value="{{this.title}}">
+            <input type="text" name="serviceDescription" placeholder="Descreva o tipo de serviço." value="{{this.description}}">
+            <input type="text" name="imageProject" placeholder="Link das fotos do projeto." value="{{this.image_project}}">
+            </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{{/each}}

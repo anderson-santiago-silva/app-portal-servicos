@@ -1,0 +1,45 @@
+<h1>Bem vindo ao portal de serviços.</h1>
+
+<form action="/signup" method="post">
+    <div>
+        <input type="text" name="userName" placeholder="Digite o seu nome e sobrenome">
+            {{#if userNameError}}
+                <span class="warning">{{userNameError}}</span>
+            {{/if}}
+    </div>
+
+    <div>
+        <input type="date" name="userBirthDate" placeholder="Informe a data de nascimento">
+        <label for="userBirthDate">Informe a data de nascimento</label>
+            {{#if userBirthDateError}}
+                <span class="warning">{{userBirthDateError}}</span>
+            {{/if}}
+    </div>
+
+    <div>
+        <input type="text" name="userImage" placeholder="Link da sua foto">
+    </div>
+
+    <div>
+        <input type="email" name="userEmail" placeholder="Informe seu email">
+            {{#if userEmailError}}
+                <span class="warning">{{userEmailError}}</span>
+            {{/if}}
+    </div>
+
+    <div>
+        <input type="text" name="userPhone" placeholder="Informe seu número de telefone">
+            {{#if userPhoneError}}
+                <span class="warning">{{userPhoneError}}</span>
+            {{/if}}
+    </div>
+
+    <div>
+        <input type="password" name="userPassword" placeholder="Crie sua senha de acesso">
+            {{#if userPasswordError}}
+                <span class="warning">{{userPasswordError}}</span>
+            {{/if}}
+    </div>
+
+    <button type="submit">Efetuar cadastro</button>
+</form>
