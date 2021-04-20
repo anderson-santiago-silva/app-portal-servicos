@@ -7,11 +7,11 @@ const homeRoutes = require('./routes/home.routes');
 const authRoutes = require('./routes/auth.routes');
 const servicesRoutes = require('./routes/services.routes');
 
-// const sessionConfig = require('./config/session.config');
+const sessionConfig = require('./config/session.config');
 
 const app = express();
 
-// sessionConfig(app);
+sessionConfig(app);
 
 require('./config/mongodb.config');
 
@@ -22,18 +22,16 @@ app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
-hbs.registerPartials(__dirname + '/views/partials');
 
 app.use('/', homeRoutes);
 app.use('/', authRoutes);
 
-// app.use((req, res, next) => {
-//     if (req.session.currentUser) {
-//         return next();
-//     }
-//     res.redirect('/login');
-// });
-
+app.use((req, res, next) => {
+    if (req.session.currentUser) {
+        return next();
+    }
+    res.redirect('/login');
+});
 
 app.use('/services', servicesRoutes);
 
@@ -52,4 +50,4 @@ app.use((err, req, res, next) => {
 });
 
 
-app.listen(3000, () => console.log('App rodando na porta 3000'));
+app.listen(process.env.PORT, () => console.log(`App rodando na porta ${process.env.PORT}`));

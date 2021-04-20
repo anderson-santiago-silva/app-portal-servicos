@@ -3,24 +3,25 @@ const express = require('express');
 const Professional = require('../models/Professional');
 const Project = require('../models/Project');
 
+const fileUploader = require('../config/cloudinary.config')
+
 
 const router = express();
 
 router.get('/', (req, res) => {
+    
     //console.log('USER DENTRO DO COOKIE ===>', req.session.currentUser);//Validar prq os cookies não somem
-    Professional.find({ profession: 'Marceneiro' }) //Deixar dinâmico o filtro de profissão
+    Professional.find() //Deixar dinâmico o filtro de profissão
     .then(professionalDatabase => {
-        //console.log(professionalDatabase);
-
         res.render('services', { professional: professionalDatabase });
     });
 });
 
 router.get('/projects/:projectId', (req, res) => {
     
-    Project.find({ executor: '6078ce14f71847f981158691' }).populate('executor') //Deixa dinâmico o filtro de projetos. Não pelo metodo "findId" (tentar concatenar pela TemplateString como no exemplo /projects/${projectId})
+        
+    Project.find({ executor: req.params.projectId }).populate('executor') //colocar uma rota apenas para os clientes sem o executor dentro do objeto
     .then(projectDatabase => {
-        //console.log(`O array é esse ==>>>`, projectDatabase);
         res.render('projects', { project: projectDatabase });
     });
 });
@@ -29,13 +30,13 @@ router.get('/new', (req, res) => {
     res.render('newProject');
 });
 
-router.post('/new', (req, res) => {
-    const { serviceTitle, serviceDescription, imageProject  } = req.body;
+router.post('/new', fileUploader.single('imageProject'), (req, res) => {
+    const { serviceTitle, serviceDescription } = req.body;
 
     const newProject = {
         title: serviceTitle,
         description: serviceDescription,
-        image_project: imageProject,
+        image: req.file.path,
         executor: '6078eab2a3fe35c8b5550e35', // Deixar dinâmico o executor conforme login
     };
 

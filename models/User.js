@@ -3,12 +3,11 @@ const { Schema, model } = require('mongoose');
 const userSchema = new Schema({
     name: { type: String, required: true, minlength: 3, maxlength: 50 },
     image: { type: String, default: 'https://www.blogodorium.com.br/wp-content/uploads/sonhar-com-sogra-o-que-isso-significa.jpg' },
-    birthDate: { type: Date, required: true },
     email: { type: String, required: true, unique: true },
     phone: { type: String, required: true },
     password: { type: String, required: true },
     active: { type: Boolean, default: true },
-    role: { type: String, enum: ['admin', 'user'], default: 'user'},
+    role: { type: String, enum: ['admin', 'user', 'professional'], default: 'user'},
 },
 {
     timestamps: true,
