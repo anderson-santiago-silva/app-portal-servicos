@@ -39,7 +39,6 @@ router.post('/signup', fileUploader.single('userImage'), async (req, res) => {
 
         await User.create({
             name: userName,
-            image: req.file.path,
             email: userEmail,
             phone: userPhone,
             password: encryptedPassword,

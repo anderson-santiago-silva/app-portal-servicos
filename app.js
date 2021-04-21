@@ -8,6 +8,7 @@ const authRoutes = require('./routes/auth.routes');
 const servicesRoutes = require('./routes/services.routes');
 
 const sessionConfig = require('./config/session.config');
+const { path } = require('./routes/home.routes');
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
+
 
 app.use('/', homeRoutes);
 app.use('/', authRoutes);

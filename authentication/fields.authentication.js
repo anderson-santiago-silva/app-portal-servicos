@@ -93,7 +93,6 @@ return errors;
 
 const emailValidation = (emailField) => {
 const errors = [];
-const emailRegex = /\S+@\S+\.\S+/;
 
 if (typeof emailField !== 'string') {
     errors.push('Digite um email válido.');
@@ -104,9 +103,6 @@ if (emailField.trim().length === 0) {
     errors.push('Campo não pode ser vazio');
 }
 
-// if (!emailRegex.test(emailField)) {
-//     errors.push('Digite um email válido.');
-// }
 
 return errors;
 };

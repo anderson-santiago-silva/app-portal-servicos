@@ -55,8 +55,6 @@ router.post('/projects/edit/:projectId', (req, res) => {
         res.redirect(`/projects/${projectId}`); // Testar esta rota depois que tudo estiver dinâmico (Aula 10 2h 30 min)
     })
     .catch(error => console.log(error));
-
 });
-
 
 module.exports = router;
