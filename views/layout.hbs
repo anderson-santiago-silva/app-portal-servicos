@@ -5,10 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
+    <style type="text/css">
+        img {
+            max-width: 100%;
+            width: 295px;
+            height: 295px;
+        }
+    </style>
     <title>Portal de Serviços</title>
 </head>
 <body>
     <nav>
+        <img class="logo" src="/images/logo.gif" alt="logo-photo">
         <a href="/home">Home</a>
         {{#if user}}
         <a href="/services">Serviços</a>
