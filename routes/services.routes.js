@@ -10,24 +10,23 @@ const router = express();
 
 router.get('/', (req, res) => {
     
-    //console.log('USER DENTRO DO COOKIE ===>', req.session.currentUser);//Validar prq os cookies não somem
     Professional.find() //Deixar dinâmico o filtro de profissão
     .then(professionalDatabase => {
-        res.render('services', { professional: professionalDatabase });
+        res.render('services', { professional: professionalDatabase, user: req.session.currentUser, isProfessional: req.session.currentUser.role === 'professional' });
     });
 });
 
 router.get('/projects/:projectId', (req, res) => {
     
-        
+    
     Project.find({ executor: req.params.projectId }).populate('executor') //colocar uma rota apenas para os clientes sem o executor dentro do objeto
     .then(projectDatabase => {
-        res.render('projects', { project: projectDatabase });
+        res.render('projects', { project: projectDatabase, user: req.session.currentUser, isProfessional: req.session.currentUser.role === 'professional' });
     });
 });
 
 router.get('/new', (req, res) => {
-    res.render('newProject');
+    res.render('newProject', { user: req.session.currentUser, isProfessional: req.session.currentUser.role === 'professional' });
 });
 
 router.post('/new', fileUploader.single('imageProject'), (req, res) => {
@@ -37,12 +36,12 @@ router.post('/new', fileUploader.single('imageProject'), (req, res) => {
         title: serviceTitle,
         description: serviceDescription,
         image: req.file.path,
-        executor: '6078eab2a3fe35c8b5550e35', // Deixar dinâmico o executor conforme login
+        executor: req.session.currentUser._id, 
     };
 
     Project.create(newProject)
     .then(() => {
-        res.redirect('/services/projects/6078eab2a3fe35c8b5550e35')// Deixar dinâmico o enderço (ID) da lista do executor
+        res.redirect(`/services/projects/${req.session.currentUser._id}`)
     })
     .catch(error => console.log(error));
 });
@@ -58,10 +57,6 @@ router.post('/projects/edit/:projectId', (req, res) => {
     .catch(error => console.log(error));
 
 });
-
-
-///INCLUIR O DELETAR PROJETOS
-
 
 
 module.exports = router;

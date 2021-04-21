@@ -7,7 +7,7 @@ const userSchema = new Schema({
     phone: { type: String, required: true },
     password: { type: String, required: true },
     active: { type: Boolean, default: true },
-    role: { type: String, enum: ['admin', 'user', 'professional'], default: 'user'},
+    role: { type: String, default: 'user' },
 },
 {
     timestamps: true,

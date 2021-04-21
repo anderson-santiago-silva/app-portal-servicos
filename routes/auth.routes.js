@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const fileUploader = require('../config/cloudinary.config')
 
 const User = require('../models/User');
+const Professional = require('../models/Professional');
 
 const { authenticationSignup } = require('../authentication/authentication');
 
@@ -14,7 +15,7 @@ router.get('/signup', (req, res) => {
 });
 
 router.post('/signup', fileUploader.single('userImage'), async (req, res) => {
-    console.log(req.body);
+    //console.log(req.body);
 
     const { userName, userEmail, userPhone, userPassword, userImage } = req.body;
 
@@ -54,41 +55,85 @@ router.get('/login', (req, res) => {
     res.render('login')
 });
 
-router.post('/login',async (req, res) => {
+router.get('/signup-professional', (req, res) => {
+    res.render('signup-professional');
+});
+
+router.post('/signup-professional', fileUploader.single('userImage'), async (req, res) => {
+    //console.log('Este é o array ==>>', req.body);
+ 
+    const { userName, userEmail, userPhone, userPassword, userImage, userProfession, userExperience, userRegion  } = req.body;
+     
+        try {
+            
+         const userFromDb = await Professional.findOne({ email: userEmail });
+         
+         if (userFromDb) {
+             return res.render('signup-professional', { userEmailError: ['Email já cadastrado!!!'] })
+            }
+ 
+            const saltRounds = 10;
+            const salt = bcrypt.genSaltSync(saltRounds);
+            const encryptedPassword = bcrypt.hashSync(userPassword, salt);
+            
+            await Professional.create({
+                name: userName,
+                image: req.file.path,
+                email: userEmail,
+                phone: userPhone,
+                profession: userProfession,
+                time_experience: userExperience,
+                acting_region: userRegion,
+                password: encryptedPassword,
+            });
+            
+            res.redirect('/login');
+        } catch (error) {
+            console.log('ERRO NA ROTA /signup ==>>', error);
+        }
+    });
+
+router.post('/login', async (req, res) => {
     try {
         const { userEmail, userPassword } = req.body;
-
+        //console.log(req.body);
+        
+        const professionalFromDb = await Professional.findOne({ email: userEmail });
         const userFromDb = await User.findOne({ email: userEmail });
-
-        if (!userFromDb) {
+                
+        if (!userFromDb && !professionalFromDb) {
             return res.render('login', { userEmailError: 'Usuário ou senha incorretos', userPasswordError: 'Usuário ou senha incorretos' });
         }
 
-        const isPasswordValid = bcrypt.compareSync(userPassword, userFromDb.password);
+        const user = userFromDb || professionalFromDb
+        //console.log(user);
+        const isPasswordValid = bcrypt.compareSync(userPassword, user.password);
 
         if (!isPasswordValid) {
             return res.render('login', { userEmailError: 'Usuário ou senha incorretos', userPasswordError: 'Usuário ou senha incorretos' });
         }
 
-        req.session.currentUser = userFromDb;
+        req.session.currentUser = user;
 
-        res.redirect('/home');
+        if (user.role === 'professional') {
+            res.redirect(`/services/projects/${req.session.currentUser._id}`)
+        } else {
+            res.redirect('/home');
+        }
 
     } catch (error) {
         console.log(error);
     }
 });
-
+ 
+ router.get('/login', (req, res) => {
+     res.render('login')
+    });
+    
 router.get('/logout', ( req, res) => {
     req.session.destroy()
     
-    res.redirect('/login')
+    res.redirect('/home')
 });
-
-router.get('/signup-professional', (req, res) => {
-    res.render('signup-professional');
-});
-
-
-
+  
 module.exports = router;

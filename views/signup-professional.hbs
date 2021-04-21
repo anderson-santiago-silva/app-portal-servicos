@@ -1,13 +1,8 @@
 <h1>Cadastre-se no portal de serviços como PROFISSIONAL!</h1>
 
-<form action="/signup" method="post" enctype="multipart/form-data">
+<form action="/signup-professional" method="post" enctype="multipart/form-data">
     <div>
         <input type="text" name="userName" placeholder="Digite o seu nome e sobrenome">
-            {{#if userNameErrors}}
-                {{#each userNameErrors}}
-                    <span class="warning">{{this}}</span>
-                {{/each}}
-            {{/if}}
     </div>
 
     <div>
@@ -16,23 +11,29 @@
 
     <div>
         <input type="email" name="userEmail" placeholder="Informe seu email">
-            {{#if userEmailErrors}}
-                <span class="warning">{{userEmailErrors.[0]}}</span>
+            {{#if userEmailError}}
+                <span class="warning">{{userEmailError}}</span>
             {{/if}}
     </div>
 
     <div>
         <input type="text" name="userPhone" placeholder="Informe seu número de telefone">
-            {{#if userPhoneErrors}}
-                <span class="warning">{{userPhoneErrors.[0]}}</span>
-            {{/if}}
+    </div>
+
+    <div>
+        <input type="text" name="userProfession" placeholder="Sua especialidade">
+    </div>
+
+    <div>
+        <input type="text" name="userExperience" placeholder="Tempo de experiência">
+    </div>
+
+    <div>
+        <input type="text" name="userRegion" placeholder="Região que atende">
     </div>
 
     <div>
         <input type="password" name="userPassword" placeholder="Crie sua senha de acesso">
-            {{#if userPasswordErrors}}
-                <span class="warning">{{userPasswordErrors.[0]}}</span>
-            {{/if}}
     </div>
 
     <button type="submit">Efetuar cadastro</button>
