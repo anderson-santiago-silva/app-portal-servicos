@@ -5,33 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
-    <style type="text/css">
-        img {
-            max-width: 100%;
-            width: 295px;
-            height: 295px;
-        }
-    </style>
     <title>Portal de Serviços</title>
+
 </head>
 <body>
-    <nav>
+    <header>
         <img class="logo" src="/images/logo.gif" alt="logo-photo">
-        <a href="/home">Home</a>
-        {{#if user}}
-        <a href="/services">Serviços</a>
-        {{#if isProfessional}}
-            <a href="/services/new">Cadastrar projeto</a>
-        {{/if}}
-        <a href="/logout">Sair</a>
-        <span>Olá {{user.name}}!</span>
-{{else}}
-        <a href="/login">Entrar</a>
-        <a href="/signup">Cadastre-se</a>
-    {{/if}}
-    </nav>
-
-    
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/home">Home</a></li>
+                {{#if user}}
+                    <li><a href="/services">Serviços</a></li>
+                {{#if isProfessional}}
+                    <li><a href="/services/new">Cadastrar projeto</a></li>
+                {{/if}}
+                    <span>Olá {{user.name}}!</span>
+                    <li><a href="/logout">Sair</a></li>
+                {{else}}
+                    <li><a href="/signup">Cadastre-se</a></li>
+                <a class="cta" href="/login"><button>Entrar</button></a>
+                {{/if}}
+            </ul>
+        </nav>
+    </header>
 
     {{{body}}}
 

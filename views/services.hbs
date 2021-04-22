@@ -1,10 +1,12 @@
-{{#each professional}}
-    <div>
-        <h3>{{this.name}}</h3>
-        <h4>{{this.profession}}</h4>
-        <img src="{{this.image}}" alt="{{this.name}} photo">
-        <h5>{{this.time_experience}} de experiência</h5>
-        <h5>Atende {{this.acting_region}}</h5>
-        <a href="/services/projects/{{this._id}}">Projetos</a><br><br>
-        </div>
-{{/each}}
+<div class='servicos'>
+    {{#each professional}}
+        <div>
+            <h3>{{this.name}}</h3>
+            <h4>{{this.profession}}</h4>
+            <img src="{{this.image}}" alt="{{this.name}} photo">
+            <h5>{{this.time_experience}} de experiência</h5>
+            <h5>Atende {{this.acting_region}}</h5>
+            <a href="/services/projects/{{this._id}}">Projetos</a><br><br>
+            </div>
+    {{/each}}
+</div>

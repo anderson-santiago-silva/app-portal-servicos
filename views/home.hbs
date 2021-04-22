@@ -1,33 +1,106 @@
-
 <div class="container">
     <img src="images/header.png" alt="Background">
     <h1>Bem vindo ao portal de serviços!</h1>
 </div>
 
-<div class="passo">
-    <img src="images/1briefing.jpg" alt="Background">
-    <h2>1.</h2>
-    <h5>Descreve sua necessidade para o profissional!</h5>
+<div class="container-description">
+    <h1>O catálogo de serviços mais completo do Brasil!</h1><br>
+        <p>Aqui você encontra os melhores prestadores de serviço da sua região com apenas um clique! Serviços com qualidade e segurança que só o portal de serviços pode oferecer. Os prestadores estão espalhados por todo o Brasil e vai ser muito fácil você encontrar o melhor profissional e poder passar diretamente para ele suas necessidades e negociar o tipo de serviço, tempo de execução e o valor! Legal, né?</p> 
+        <p><strong> Passe o mouse pelas imagens e veja como é fácil usar o portal de serviços;</strong></p>
 </div>
 
-<div class="passo">
-    <img src="images/2negociando.jpg" alt="Background">
-    <h2>2.</h2>
-    <h5>Negocie com o profissional!</h5>
-</div>
-
-<div class="passo">
-    <img src="images/3fechado.jpg" alt="Background">
-    <h2>3.</h2>
-    <h5>Feche o negócio!</h5>
-</div>
+<section class="justify">
+    <section class='flex'>
+            <img src="images/1briefing.jpg" alt="Background">
+        <div>
+            <h1>1.</h1>
+            <p>Encontre o seu profissional em nosso catálogo de serviços e passe para ele sua necessiadade!</p>
+        </div>
+    </section>
+    <section class="flex">
+            <img src="images/2negociando.jpg" alt="Background">
+        <div>
+            <h1>2.</h1>
+            <p>Negocie diretamente com o profissional os valores e prazos!</p>
+        </div>
+    </section>
+    <section class="flex">
+            <img src="images/3fechado.jpg" alt="Background">
+        <div>
+            <h1>3.</h1>
+            <p>Pronto! Agora é só bater o martelo e fechar o melhor negócio para os dois!</p>
+        </div>
+    </section>
+</section>
 
 <footer>
-    <p>Descrição do endereço</p>
-    <p>Descrição do endereço</p>
-    <p>Descrição do endereço</p>
-    <p>Descrição do endereço</p>
-    <p>Descrição do endereço</p>
-    <p>Descrição do endereço</p>
 
+    <ul class="nav_links_footer">
+        <li><a href="/home">Home</a></li>
+        {{#if user}}
+            <li><a href="/services">Serviços</a></li>
+        {{#if isProfessional}}
+            <li><a href="/services/new">Cadastrar projeto</a></li>
+        {{/if}}
+            <span>Olá {{user.name}}!</span>
+            <li><a href="/logout">Sair</a></li>
+        {{else}}
+            <li><a href="/signup">Cadastre-se</a></li>
+            <li><a href="/login">Entrar</a></li>
+        {{/if}}
+    </ul>
+
+
+
+    <div class="wrapper">
+        <div class="footer-box">
+            <div class="company-footer">
+                <img src="images/logo.gif">
+                <h2>Portal de Serviços</h2>
+                <p>A maneira mais fácil de encontrar um profissional para cada necessidade!</p>
+            </div>
+        </div>
+        <div class="footer-box">
+            <div class="articles-footer">
+                <h2>Fale conosco:</h2>
+                <ul class="footer-list footer-article-list">
+                    <li>
+                        <h4>Telefone:</h4>
+                        <p>55+ 11-91234-5678</p>
+                    </li>
+                    <li>
+                        <h4>Endreço:</h4>
+                        <p>Avenida Paulista, Cj. 1.500, Bela Vista, São Paulo, SP</p>
+                    </li>
+                    <li>
+                        <h4>Email:</h4>
+                        <p>portalservicos@portalservicos.com.br</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h2>Nos encontre nas redes sociais</h2>
+            <ul class="footer-list">
+                <li>
+                        <span>Facebook</span>
+                    </a>
+                </li>
+                <li>
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li>
+                        <span>Linkedin</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="wrapper">
+            <p>portalServicos - 2020</p>
+        </div>
+    </div>
 </footer>
+
