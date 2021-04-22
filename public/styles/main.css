@@ -156,8 +156,6 @@ section.flex h1 {
     color: #e55b87;   
 }
 
-
-
 .company-footer img {
     margin-right: auto;
     width: 100px;
@@ -192,7 +190,6 @@ footer .wrapper:after {
 	display: block;
 }
 
-
 .company-footer h2 {
 	margin-top: 20px;
 }
@@ -205,13 +202,11 @@ footer .wrapper:after {
 	margin-bottom: 15px;
 }
 
-
 .footer-list li:after {
 	clear: both;
 	content: "";
 	display: block;
 }
-
 
 .footer-list.footer-article-list span {
 	display: block;
@@ -282,10 +277,105 @@ input{
 
 /* Servicços */
 
+.flexProfession {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .servicos {
-    border: 2px solid red;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    border: 0px solid white;
+    box-shadow: 2px 3px 6px grey;
+    margin: 10px auto;
+    display: table;
+    
 }
 
 .servicos a {
+    font-size: 14px;
     color: blue;
 }
+
+.servicos h4 {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.servicos h5 {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.servicos p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+img.imgPerfil {
+    max-width: 130px;
+    height: 130px;
+    margin-top: 10px;
+    border-radius: 50%;
+    display: table-cell;
+    float: left;
+}
+
+.text {
+    display: table-cell;
+    float: left;
+    width: 300px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+img.star {
+    margin-top: 5px;
+    width: 20px;
+}
+
+/* Projetos */
+
+.project {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+    display: flex;
+    border: 2px solid red;
+    margin: auto;
+}
+
+div.executorText {
+    display: table-cell;
+    float: left;
+    width: 250px;
+    color: white;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+img.executorImg {
+    max-width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    border-radius: 50%;
+    display: table-cell;
+    float: left;
+}
+
+.project img {
+    width: 250px;
+    border: red 2px solid;
+}
+
+.projectFlex {
+    border: 2px solid blue;
+    margin: 10px;
+}
+
+.executor {
+    border: 2px solid blue;
+}
+
+

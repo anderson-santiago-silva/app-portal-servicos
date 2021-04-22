@@ -1,16 +1,23 @@
-{{#if project}}
+<div class="project">
+  {{#if project}}
+    <div class="executor">
+      <img class="executorImg" src="{{project.[0].executor.image}}" alt="{{this.executor.name}} photo">
+      <div class="executorText">    
         <h1>{{project.[0].executor.name}}</h1>
-        <img src="{{project.[0].executor.image}}" alt="{{this.executor.name}} photo">
-        <h3>{{project.[0].executor.phone}}</h3><br>
-  {{#each project}}<br>
-    <div>
-        <h3>{{this.title}}</h3>
-        <h4>Descrição</h4>
+        <h3>{{project.[0].executor.phone}}</h3>
+        <h3>{{project.[0].executor.email}}</h3>
+      </div>
+      </div>
+    {{#each project}}<br>
+      <div class="projectFlex">
+        <h4>Projeto:</h4>
+        <h5>{{this.title}}</h5>
+        <h4>Descrição do projeto:</h4>
         <h5>{{this.description}}</h5>
-        <h4>Fotos do projeto</h4>
-        <img src="{{this.image}}" alt="{{this.name}} photo"> <!-- Para lisar imagens em um array é preciso fazer um loop no array com o #each -->
-        </div>
-  {{/each}}
-  {{else}}
-  <h1>Este profisional ainda não tem projetos</h1>
-{{/if}}
+        <img src="{{this.image}}" alt="{{this.name}} photo">
+      </div>
+    {{/each}}
+</div>
+    {{else}}
+    <h1>Este profisional ainda não tem projetos</h1>
+  {{/if}}

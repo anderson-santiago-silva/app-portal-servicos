@@ -8,7 +8,7 @@ const authRoutes = require('./routes/auth.routes');
 const servicesRoutes = require('./routes/services.routes');
 
 const sessionConfig = require('./config/session.config');
-const { path } = require('./routes/home.routes');
+//const { path } = require('./routes/home.routes');
 
 const app = express();
 

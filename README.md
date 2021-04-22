@@ -5,3 +5,14 @@
 
 ### MONGODB_URI=<link-de-conexão-com-o-banco-mongodb>
 ### SESS_SECRET=<senha-aleatória>
+
+
+#Recursos
+Express
+Node.js
+Mongoose
+hbs
+#Linguagem
+Javascript
+CSS
+HTML
