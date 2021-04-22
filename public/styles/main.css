@@ -280,6 +280,11 @@ input{
 .flexProfession {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.servicos:hover {
+    zoom: 105%;
 }
 
 .servicos {
@@ -288,14 +293,9 @@ input{
     height: auto;
     border: 0px solid white;
     box-shadow: 2px 3px 6px grey;
-    margin: 10px auto;
     display: table;
-    
-}
-
-.servicos a {
-    font-size: 14px;
-    color: blue;
+    color: black;
+    margin: 10px auto;
 }
 
 .servicos h4 {
@@ -316,7 +316,7 @@ input{
 img.imgPerfil {
     max-width: 130px;
     height: 130px;
-    margin-top: 10px;
+    margin: 10px auto;
     border-radius: 50%;
     display: table-cell;
     float: left;
@@ -342,16 +342,12 @@ img.star {
     background-color: rgba(0, 0, 0, .4);
     color: white;
     display: flex;
-    border: 2px solid red;
     margin: auto;
 }
 
-div.executorText {
-    display: table-cell;
-    float: left;
-    width: 250px;
-    color: white;
-    margin-top: 50px;
+.executor {
+    display: block;
+    height: 100%;
     margin-left: 10px;
 }
 
@@ -360,22 +356,30 @@ img.executorImg {
     height: 150px;
     margin: 20px auto;
     border-radius: 50%;
-    display: table-cell;
-    float: left;
 }
 
 .project img {
     width: 250px;
-    border: red 2px solid;
+}
+
+.projectContainer {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .projectFlex {
-    border: 2px solid blue;
-    margin: 10px;
+    background-color: white;
+    color: rgb(134, 134, 134);
+    border: 0px solid white;
+    box-shadow: 2px 3px 10px rgb(46, 44, 44);
+    margin-top: 10px;
 }
 
-.executor {
-    border: 2px solid blue;
+.projectFlex:hover {
+    zoom: 110%;
 }
 
 
