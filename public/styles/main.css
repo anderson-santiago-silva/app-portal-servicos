@@ -230,6 +230,7 @@ footer .wrapper:after {
 
 /* Login*/
 .formLogin {
+    margin-top: 37px;
     background-color: #c7eaca;
     max-width: 500px;
     width: 70%;
@@ -247,7 +248,7 @@ footer .wrapper:after {
 
 input{
     width: 100%;
-    height: 30px;
+    height: 27px;
     border: 1px solid #ccc;
     padding-left: 10px;
     margin: 10px 0;
