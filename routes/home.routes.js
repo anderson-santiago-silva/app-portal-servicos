@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express();
 
-router.get('/home', (req, res) => {
+router.get('/', (req, res) => {
    
     const isProfessional = req.session.currentUser && req.session.currentUser.role === 'professional';
 
