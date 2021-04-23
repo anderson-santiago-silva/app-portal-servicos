@@ -10,14 +10,16 @@
     {{#each project}}<br>
         <div class="projectFlex">
         <img src="{{this.image}}" alt="{{this.name}} photo">
+          <div class="projectText">
           <h4>Projeto:</h4>
           <h5>{{this.title}}</h5>
           <h4>Descrição do projeto:</h4>
           <h5>{{this.description}}</h5>
+          </div>
         </div>
     {{/each}}
       </div>
     {{else}}
-    <h1>Este profisional ainda não tem projetos</h1>
+    <h1>Este profissional ainda não tem projetos!</h1>
   {{/if}}
 </div>

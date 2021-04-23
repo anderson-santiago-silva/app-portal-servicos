@@ -372,6 +372,20 @@ img.executorImg {
     justify-content: space-evenly;
 }
 
+.projectText {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.projectText h4 {
+    margin-top: 5px;
+}
+
+.projectFlex img {
+    width: 100%;
+    height: 170px;
+}
+
 .projectFlex {
     width: 250px;
     background-color: white;
