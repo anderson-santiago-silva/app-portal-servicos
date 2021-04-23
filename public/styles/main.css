@@ -365,13 +365,15 @@ img.executorImg {
 
 .projectContainer {
     width: 100%;
-    margin: auto;
+    height: 100%;
+    margin: auto 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .projectFlex {
+    width: 250px;
     background-color: white;
     color: rgb(134, 134, 134);
     border: 0px solid white;
