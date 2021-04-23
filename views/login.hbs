@@ -1,24 +1,22 @@
 <div class="formLogin">
-<h1 class="login">Login</h1>
-<section>
-<form action="/login" method="post">
-    <div>
-        <label for="">Digite seu email</label><br>
-            <input type="email" name="userEmail" placeholder="Informe seu email" required>
-                {{#if userEmailError}}
-                    <span class="warning">{{userEmailError}}</span>
-                {{/if}}
-    </div>
-
-    <div>
-        <label for="">Digite sua senha</label><br>
-        <input type="password" name="userPassword" placeholder="Digite sua senha de acesso">
-            {{#if userPasswordError}}
-                <span class="warning">{{userPasswordError}}</span>
-            {{/if}}
-    </div>
-
-    <button type="submit">Login</button>
-</form>
-</section>
+    <h1 class="login">Login</h1>
+    <section>
+        <form action="/login" method="post">
+            <div>
+                <label for="">Digite seu email</label><br>
+                    <input type="email" name="userEmail" placeholder="Seu email" required>
+                    {{#if userEmailError}}
+                        <span class="warning">{{userEmailError}}</span>
+                    {{/if}}
+            </div>
+            <div>
+                <label for="">Digite sua senha</label><br>
+                <input type="password" name="userPassword" placeholder="Sua senha de acesso">
+                    {{#if userPasswordError}}
+                        <span class="warning">{{userPasswordError}}</span>
+                    {{/if}}
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </section>
 </div>

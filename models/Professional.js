@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const professionalSchema = new Schema({
     name: { type: String, required: true, minlength: 3, maxlength: 50 },
-    image: { type: String, default: 'https://institutouniversal.vteximg.com.br/arquivos/ids/157031-1000-1000/image_instalador_sistemas_de_alarme.jpg?v=635368922220070000' },
+    image: { type: String, default: '/images/icon_prof.png' },
     email: { type: String, required: true, unique: true },
     phone: { type: String, required: true },
     profession: { type: String },
@@ -17,4 +17,5 @@ const professionalSchema = new Schema({
 });
 
 const Professional = model('Professional', professionalSchema);
+
 module.exports = Professional;

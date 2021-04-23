@@ -1,45 +1,37 @@
 <div class="formLogin">
 
-<h4>Cadastre-se e mostre seus projetos!</h4>
+    <h4>Cadastre-se e mostre seus projetos!</h4>
 
-<form action="/signup-professional" method="post" enctype="multipart/form-data">
-    <div>
-        <input type="text" name="userName" placeholder="Digite o seu nome e sobrenome">
-    </div>
-
-    <div>
-        <h6>Insira sua foto de perfil</h6>
-        <input type="file" name="userImage" placeholder="Link da sua foto">
-    </div>
-
-    <div>
-        <input type="email" name="userEmail" placeholder="Informe seu email">
+    <form action="/signup-professional" method="post" enctype="multipart/form-data">
+        <div>
+            <input type="text" name="userName" placeholder="Digite o seu nome">
+        </div>
+        <div>
+            <h6>Insira a foto do seu perfil</h6>
+            <input type="file" name="userImage" placeholder="Link da sua foto">
+        </div>
+        <div>
+            <input type="email" name="userEmail" placeholder="Digite seu email">
             {{#if userEmailError}}
                 <span class="warning">{{userEmailError}}</span>
             {{/if}}
-    </div>
+        </div>
+        <div>
+            <input type="text" name="userPhone" placeholder="Digite o número do seu telefone">
+        </div>
+        <div>
+            <input type="text" name="userProfession" placeholder="Sua especialidade">
+        </div>
+        <div>
+            <input type="text" name="userExperience" placeholder="Tempo de experiência">
+        </div>
+        <div>
+            <input type="text" name="userRegion" placeholder="Região em que atende">
+        </div>
+        <div>
+            <input type="password" name="userPassword" placeholder="Crie sua senha de acesso">
+        </div>
 
-    <div>
-        <input type="text" name="userPhone" placeholder="Informe seu número de telefone">
-    </div>
-
-    <div>
-        <input type="text" name="userProfession" placeholder="Sua especialidade">
-    </div>
-
-    <div>
-        <input type="text" name="userExperience" placeholder="Tempo de experiência">
-    </div>
-
-    <div>
-        <input type="text" name="userRegion" placeholder="Região que atende">
-    </div>
-
-    <div>
-        <input type="password" name="userPassword" placeholder="Crie sua senha de acesso">
-    </div>
-
-    <button type="submit">Cadastrar</button>
-</form>
-
+        <button type="submit">Cadastrar</button>
+    </form>
 </div>

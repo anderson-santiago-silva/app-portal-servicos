@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+/* Global */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,6 +16,8 @@ li, a, button {
     color: #edf0f1;
     text-decoration: none;
 }
+
+/* navBar */
 
 header {
     position: relative;
@@ -63,6 +67,8 @@ button:hover{
     color: #e55b87;
 }
 
+/* Alertas */
+
 .warning {
     display: block;
     color: tomato;
@@ -71,6 +77,8 @@ button:hover{
 span {
     color: white;
 }
+
+/* Home */
 
 div.container {
     position: relative;
@@ -84,13 +92,11 @@ div.container {
     border: 2px solid orange;
 }
 
-
 .container img {
     display: block;
     width: 100%;
     height: 100%;
     }
-
     
 section.flex {
     position: relative;
@@ -118,6 +124,7 @@ section.flex div {
     transition: opacity 1s;
     border-radius: 50%;
 }
+
 section.flex:hover div {
     opacity: 1;
 }
@@ -140,7 +147,6 @@ section.flex h1 {
 }
 
 /* footer */
-
 
 .nav_links_footer li {
     display: inline-block;
@@ -229,6 +235,7 @@ footer .wrapper:after {
 }
 
 /* Login*/
+
 .formLogin {
     margin-top: 37px;
     background-color: #c7eaca;

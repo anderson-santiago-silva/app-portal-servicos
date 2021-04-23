@@ -1,23 +1,22 @@
-
 <div class="flexProfession">
     {{#each professional}}
-<a href="/services/projects/{{this._id}}">
+    <a href="/services/projects/{{this._id}}">
         <div class='servicos'>
-                <div class="serviceContainer">
-                    <img class="imgPerfil"src="{{this.image}}" alt="{{this.name}} photo">
-                    <div class="text">
-                        <h4>Nome: {{this.name}}</h4>
-                        <h4>Profissão: {{this.profession}}</h4>
-                        <h5>Tempo de experiência: {{this.time_experience}}</h5>
-                        <h5>Atende: {{this.acting_region}}</h5>
-                        <img class="star" src="images/star.png" id="s1">
-                        <img class="star" src="images/star.png" id="s1">
-                        <img class="star" src="images/star.png" id="s1">
-                        <img class="star" src="images/star2.png" id="s1">
-                        <img class="star" src="images/star2.png" id="s1">
-                    </div>
+            <div class="serviceContainer">
+                <img class="imgPerfil"src="{{this.image}}" alt="{{this.name}} photo">
+                <div class="text">
+                    <h4>Nome: {{this.name}}</h4>
+                    <h4>Profissão: {{this.profession}}</h4>
+                    <h5>Tempo de experiência: {{this.time_experience}}</h5>
+                    <h5>Atende: {{this.acting_region}}</h5>
+                    <img class="star" src="images/star.png" id="s1">
+                    <img class="star" src="images/star.png" id="s1">
+                    <img class="star" src="images/star.png" id="s1">
+                    <img class="star" src="images/star2.png" id="s1">
+                    <img class="star" src="images/star2.png" id="s1">
                 </div>
+            </div>
         </div>
-</a>
+    </a>
     {{/each}}
 </div>

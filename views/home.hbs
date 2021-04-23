@@ -1,31 +1,31 @@
 <div class="container">
     <img src="images/header.png" alt="Background">
-    <h1>Bem vindo ao portal de serviços!</h1>
+    <h1>Bem vindo ao Portal de serviços!</h1>
 </div>
 
 <div class="container-description">
     <h1>O catálogo de serviços mais completo do Brasil!</h1><br>
-        <p>Aqui você encontra os melhores prestadores de serviço da sua região com apenas um clique! Serviços com qualidade e segurança que só o portal de serviços pode oferecer. Os prestadores estão espalhados por todo o Brasil e vai ser muito fácil você encontrar o melhor profissional e poder passar diretamente para ele suas necessidades e negociar o tipo de serviço, tempo de execução e o valor! Legal, né?</p> 
-        <p><strong> Passe o mouse pelas imagens e veja como é fácil usar o portal de serviços;</strong></p>
+        <p>Aqui você encontra os melhores prestadores de serviço da sua região com apenas um clique! Serviços com qualidade e segurança que só o Portal de serviços pode oferecer. Os prestadores estão espalhados por todo o Brasil e vai ser muito fácil você encontrar o melhor profissional e poder passar diretamente para ele suas necessidades e negociar o tipo de serviço, tempo de execução e o valor! Legal, né?</p> 
+        <p><strong> Passe o mouse pelas imagens e veja como é fácil usar o Portal de serviços;</strong></p>
 </div>
 
 <section class="justify">
     <section class='flex'>
-            <img src="images/1briefing.jpg" alt="Background">
+        <img src="images/1briefing.jpg" alt="Background">
         <div>
             <h1>1.</h1>
-            <p>Encontre o seu profissional em nosso catálogo de serviços e passe para ele sua necessiadade!</p>
+            <p>Encontre o profissional que você precisa em nosso catálogo de serviços e passe para ele sua necessiadade!</p>
         </div>
     </section>
     <section class="flex">
-            <img src="images/2negociando.jpg" alt="Background">
+        <img src="images/2negociando.jpg" alt="Background">
         <div>
             <h1>2.</h1>
-            <p>Negocie diretamente com o profissional os valores e prazos!</p>
+            <p>Combine diretamente com ele prazos, valores e tudo que envolva seu projeto!</p>
         </div>
     </section>
     <section class="flex">
-            <img src="images/3fechado.jpg" alt="Background">
+        <img src="images/3fechado.jpg" alt="Background">
         <div>
             <h1>3.</h1>
             <p>Pronto! Agora é só bater o martelo e fechar o melhor negócio para os dois!</p>
@@ -39,18 +39,16 @@
         <li><a href="/home">Home</a></li>
         {{#if user}}
             <li><a href="/services">Serviços</a></li>
-        {{#if isProfessional}}
-            <li><a href="/services/new">Cadastrar projeto</a></li>
-        {{/if}}
+            {{#if isProfessional}}
+                <li><a href="/services/new">Cadastrar projeto</a></li>
+            {{/if}}
             <span>Olá {{user.name}}!</span>
             <li><a href="/logout">Sair</a></li>
-        {{else}}
+            {{else}}
             <li><a href="/signup">Cadastre-se</a></li>
             <li><a href="/login">Entrar</a></li>
         {{/if}}
     </ul>
-
-
 
     <div class="wrapper">
         <div class="footer-box">
@@ -83,16 +81,13 @@
             <h2>Nos encontre nas redes sociais</h2>
             <ul class="footer-list">
                 <li>
-                        <span>Facebook</span>
-                    </a>
+                    <span>Facebook</span>
                 </li>
                 <li>
-                        <span>Instagram</span>
-                    </a>
+                    <span>Instagram</span>
                 </li>
                 <li>
-                        <span>Linkedin</span>
-                    </a>
+                    <span>Linkedin</span>
                 </li>
             </ul>
         </div>

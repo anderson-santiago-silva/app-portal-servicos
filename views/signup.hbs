@@ -1,42 +1,38 @@
 <div class="formLogin">
 
-<h4>Cadastre-se para ter acesso a plataforma com todos os serviços disponíveis.</h4><br>
+<h4>Cadastre-se para ter acesso a todos os serviços disponíveis na plataforma!</h4><br>
 
-<p>É profissional? Então cadastre-se 
-<a href="/signup-professional">aqui</a>!</p>
+    <p>É profissional? Então cadastre-se 
+    <a href="/signup-professional">aqui</a>!</p>
 
-<form action="/signup" method="post" enctype="multipart/form-data">
-    <div>
-        <input type="text" name="userName" placeholder="Digite o seu nome e sobrenome">
+    <form action="/signup" method="post" enctype="multipart/form-data">
+        <div>
+            <input type="text" name="userName" placeholder="Digite o seu nome">
             {{#if userNameErrors}}
                 {{#each userNameErrors}}
                     <span class="warning">{{this}}</span>
                 {{/each}}
             {{/if}}
-    </div>
-
-    <div>
-        <input type="email" name="userEmail" placeholder="Informe seu email">
+        </div>
+        <div>
+            <input type="email" name="userEmail" placeholder="Digite seu email">
             {{#if userEmailErrors}}
                 <span class="warning">{{userEmailErrors.[0]}}</span>
             {{/if}}
-    </div>
-
-    <div>
-        <input type="text" name="userPhone" placeholder="Informe seu número de telefone">
+        </div>
+        <div>
+            <input type="text" name="userPhone" placeholder="Digite o número do seu telefone">
             {{#if userPhoneErrors}}
                 <span class="warning">{{userPhoneErrors.[0]}}</span>
             {{/if}}
-    </div>
-
-    <div>
-        <input type="password" name="userPassword" placeholder="Crie sua senha de acesso">
+        </div>
+        <div>
+            <input type="password" name="userPassword" placeholder="Crie sua senha de acesso">
             {{#if userPasswordErrors}}
                 <span class="warning">{{userPasswordErrors.[0]}}</span>
             {{/if}}
-    </div>
+        </div>
 
-    <button type="submit">Cadastrar</button>
-</form>
-
+        <button type="submit">Cadastrar</button>
+    </form>
 </div>

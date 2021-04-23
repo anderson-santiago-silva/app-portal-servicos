@@ -1,25 +1,25 @@
 <div class="project">
     <div class="executor">
-  {{#if project}}
+    {{#if project}}
       <img class="executorImg" src="{{project.[0].executor.image}}" alt="{{this.executor.name}} photo">
-        <h1>{{project.[0].executor.name}}</h1>
-        <h3>{{project.[0].executor.phone}}</h3>
-        <h3>{{project.[0].executor.email}}</h3>
+      <h1>{{project.[0].executor.name}}</h1>
+      <h3>{{project.[0].executor.phone}}</h3>
+      <h3>{{project.[0].executor.email}}</h3>
     </div>
-      <div class="projectContainer">
-    {{#each project}}<br>
-        <div class="projectFlex">
-        <img src="{{this.image}}" alt="{{this.name}} photo">
-          <div class="projectText">
+    <div class="projectContainer">
+      {{#each project}}<br>
+      <div class="projectFlex">
+      <img src="{{this.image}}" alt="{{this.name}} photo">
+        <div class="projectText">
           <h4>Projeto:</h4>
           <h5>{{this.title}}</h5>
           <h4>Descrição do projeto:</h4>
           <h5>{{this.description}}</h5>
-          </div>
         </div>
-    {{/each}}
       </div>
-    {{else}}
-    <h1>Este profissional ainda não tem projetos!</h1>
-  {{/if}}
+      {{/each}}
+    </div>
+      {{else}}
+    <h1>Infelizmente este profissional ainda não tem projetos!</h1>
+    {{/if}}
 </div>
