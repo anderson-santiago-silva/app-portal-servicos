@@ -340,10 +340,9 @@ img.star {
 
 .project {
     width: 100%;
-    background-color: rgba(0, 0, 0, .4);
-    color: white;
+    background-size: cover;
+    color: rgb(134, 134, 134);
     display: flex;
-    margin: auto;
 }
 
 .executor {
@@ -357,6 +356,7 @@ img.executorImg {
     height: 150px;
     margin: 20px auto;
     border-radius: 50%;
+    border: 2px solid orange;
 }
 
 .project img {
