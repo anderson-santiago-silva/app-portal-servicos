@@ -117,7 +117,7 @@ router.post('/login', async (req, res) => {
         if (user.role === 'professional') {
             res.redirect(`/services/projects/${req.session.currentUser._id}`)
         } else {
-            res.redirect('/home');
+            res.redirect('/');
         }
 
     } catch (error) {
@@ -132,7 +132,7 @@ router.post('/login', async (req, res) => {
 router.get('/logout', ( req, res) => {
     req.session.destroy()
     
-    res.redirect('/home')
+    res.redirect('/')
 });
   
 module.exports = router;
