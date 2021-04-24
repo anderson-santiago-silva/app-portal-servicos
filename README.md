@@ -7,10 +7,10 @@
 <h1 align="center">
     <img class="logo" src="./public/images/preview.gif">
 </h1>
----
-<h3>
+
+<h4>
     <a href="https://app-portal-de-servicos.herokuapp.com/">Acessar a aplicação.</a>
-</h3>
+</h4>
 
 ## Indice
 - 🔖 [Sobre](#-Sobre)
