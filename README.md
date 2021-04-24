@@ -9,7 +9,7 @@
 </h1>
 
 <h4>
-    <a href="https://app-portal-de-servicos.herokuapp.com/">Acessar a aplicação.</a>
+    <a href="https://app-portal-de-servicos.herokuapp.com/">🚀 Acessar a aplicação.</a>
 </h4>
 
 ## Indice
