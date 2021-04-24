@@ -13,7 +13,7 @@
 
 ## 🔖 Sobre
 
-A plataforma **Portal de Serviços** foi desenvolvida para que pessoas comuns tenham mais facilidade em encontrar porfissionais de diversas áreas para lhes auxiliarem em tarefas que podem exigir um pouco mais de entendimento ou técnica para serem executadas.
+A plataforma **Portal de Serviços** foi desenvolvida para que pessoas comuns tenham mais facilidade em encontrar profissionais de diversas áreas para lhes auxiliarem em tarefas que podem exigir um pouco mais de entendimento ou técnica para serem executadas.
 
 <h1 align="center">
     <img class="logo" src="./public/images/preview.gif">
