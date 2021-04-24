@@ -7,9 +7,16 @@
 <h1 align="center">
     <img class="logo" src="./public/images/preview.gif">
 </h1>
+---
+<h3>
+    <a href="https://app-portal-de-servicos.herokuapp.com/">Acessar a aplicação.</a>
+</h3>
 
-
-
+## Indice
+- 🔖 [Sobre](#-Sobre)
+- 🧰 [Recursos](#-recursos)
+- 📝 [Linguagens](#-linguagens)
+- 📦 [Para rodar local](#-para-rodar-local)
 
 ## 🔖 Sobre
 
@@ -17,24 +24,26 @@ A plataforma **Portal de Serviços** foi desenvolvida para que pessoas comuns te
 
 ---
 
-## 🧰 Recursos utilizados
+## 🧰 Recursos
 
 - Express
 - Node.js
 - Mongoose
 - hbs
 
+---
 
-## 📝 Linguagens utilizadas
+## 📝 Linguagens
 
 - Javascrip
 - CSS
 - HTML
 
+---
+
 ## 📦 Para rodar local
 
 ```bash
-    
     $ git clone https://github.com/anderson-santiago-silva/app-portal-servicos.git
 
     $ npm install
