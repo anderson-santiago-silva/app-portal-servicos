@@ -58,5 +58,5 @@ A plataforma **Portal de Serviços** foi desenvolvida para que pessoas comuns te
     $ npm start
 ```
 
-Desenvolvido 💥 por Anderson Santiago 🐱‍
+Desenvolvido 💥 por Anderson Santiago
 
