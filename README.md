@@ -1,22 +1,52 @@
-# PORTAL DE SERVIÇOS
+
+<h1 align="center">
+    <img class="logo" src="./public/images/logo.gif">
+</h1>
 
 
-# Para rodar o app localmente:
-
-1. npm install no terminal
-2. Criar arquivo .env como as seguintes variáveis:
-
-### MONGODB_URI=<link-de-conexão-com-o-banco-mongodb>
-### SESS_SECRET=<senha-aleatória>
+<h1 align="center">
+    <img class="logo" src="./public/images/preview.gif">
+</h1>
 
 
-#Recursos
-Express
-Node.js
-Mongoose
-hbs
-#Linguagem
-Javascript
-CSS
-HTML
+
+
+## 🔖 Sobre
+
+A plataforma **Portal de Serviços** foi desenvolvida para que pessoas comuns tenham mais facilidade em encontrar porfissionais de diversas áreas para lhes auxiliarem em tarefas que podem exigir um pouco mais de entendimento ou técnica para serem executadas.
+
+---
+
+## 🧰 Recursos utilizados
+
+- Express
+- Node.js
+- Mongoose
+- hbs
+
+
+## 📝 Linguagens utilizadas
+
+- Javascrip
+- CSS
+- HTML
+
+## 📦 Para rodar local
+
+```bash
+    
+    $ git clone https://github.com/anderson-santiago-silva/app-portal-servicos.git
+
+    $ npm install
+
+    $ .env
+          MONGODB_URI 
+          SESS_SECRET=<senha-aleatória>
+          +++
+          +++
+
+    $ npm start
+```
+
+
 
