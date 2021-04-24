@@ -49,13 +49,14 @@ A plataforma **Portal de Serviços** foi desenvolvida para que pessoas comuns te
 
     $ npm install
 
-    $ .env
+    $ npm start
+    
+    #incuir arquivo .env
+    .env
           MONGODB_URI 
           SESS_SECRET=<senha-aleatória>
-          +++
-          +++
-
-    $ npm start
+          
+    
 ```
 
 Desenvolvido 💥 por Anderson Santiago
