@@ -53,8 +53,15 @@ A plataforma **Portal de Serviços** foi desenvolvida para que pessoas comuns te
     
     #incuir arquivo .env
     .env
-          MONGODB_URI 
+          PORT=<Indicação da porta>
+          MONGODB_URI<Caminho porta servidor local>
           SESS_SECRET=<senha-aleatória>
+          CLOUDINARY_NAME=<Cloud name>
+          CLOUDINARY_KEY=<API Key>
+          CLOUDINARY_SECRET=<API Secret>
+          
+          
+          
           
     
 ```
