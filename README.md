@@ -36,7 +36,7 @@ A plataforma **Portal de Serviços** foi desenvolvida para que pessoas comuns te
 
 ## 📝 Linguagens
 
-- Javascrip
+- JavaScript
 - CSS
 - HTML
 
