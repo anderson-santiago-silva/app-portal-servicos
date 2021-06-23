@@ -30,7 +30,7 @@ A plataforma **Portal de Serviços** foi desenvolvida para que pessoas comuns te
 - Express
 - Node.js
 - Mongoose
-- hbs
+- HBS
 
 ---
 
